@@ -1,4 +1,4 @@
-# Source code for http://elabs.academy/
+### Source code for http://elabs.academy/
 
 Built using: React, Redux, D3.js, Node, Express, MySQL, AWS. 
 
