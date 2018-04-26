@@ -1,0 +1,154 @@
+// For the /learn page 
+
+
+#PreviewHeader { 
+	font-weight: 500;
+	font-size: 1.4em;
+	margin-bottom: 15px;
+}
+
+
+
+ul {
+  list-style-type: none;
+    padding: 0;
+
+}
+
+#ModelPreview { 
+	height: 100%;
+}
+
+.wrapper { 
+  overflow:hidden;
+  height: 100%;
+}
+
+
+// Mobile
+@media (max-aspect-ratio: 1/1) {
+   #one { 
+    float: none;
+    margin-right:0;
+    width:auto;
+    border:0;
+    height: Auto;
+    min-height: 200px;
+	padding: 20px;
+	  background-color: $lightGrey;
+
+  }
+
+  #two { 
+	  background-color: white;
+	  
+	  overflow-y:scroll; 
+	  -webkit-overflow-scrolling: touch;
+
+	  min-height: 200px;
+	  height: calc(100% - 240px);
+	  padding: 30px;
+
+  }
+
+  .linkDiv { 
+	height: 40px;
+	padding: 10px;
+	padding-left: 20px;
+	background-color: $lightBlue;
+  } 
+
+}
+
+
+// Desktop
+@media (min-aspect-ratio: 1/1), (min-width: 1000px) {
+
+	#one {
+	  background-color: $lightGrey;
+	  float:left; 
+	  width: 400px;
+	  height: 100%;
+	  min-height: 200px;
+	  padding: 20px;
+	}
+	#two { 
+	  background-color: white;
+	  
+	  overflow-y:scroll; 
+	  -webkit-overflow-scrolling: touch;
+	  
+	  min-height: 200px;
+	  height: calc(100% - 45px);
+	  padding: 30px;
+	}
+
+	.linkDiv { 
+		height: 45px;
+		padding: 10px;
+		padding-left: 20px;
+		background-color: $lightBlue;
+	}
+
+}
+
+#two p { 
+	line-height: 1.6em;
+
+}
+
+
+.ActiveDiv { 
+	background-color: $darkBlue;
+}
+.activeText { 
+	color: white !important;
+	font-weight: 500;
+}
+
+
+.startButton { 
+	width: 178px !important;
+	height: 44px !important;
+	border-radius: 0 !important;
+	font-family: 'Oxygen', "Segoe UI", "Helvetica Neue", sans-serif !important;
+	font-weight: 400 !important;
+	animation: nextEase 3s infinite ease;
+	margin-top: 1px !important;
+}
+
+.startButton:hover { 
+	animation: hoverAnim 2s infinite ease;
+	margin-top: 0px !important;
+}
+
+
+.startButtonDiv { 
+	width: 178px !important;
+	height: 45px !important;
+	margin-bottom: 15px;
+}
+
+.buttImage { 
+	height: 13px;
+}
+
+.buttImageForward { 
+	margin-left: 5px;
+}
+
+
+
+.routeDiv { 
+	height: 40px;
+	padding: 9px;
+	color: black;
+}
+
+.routeDiv:hover { 
+	background-color: $lightGrey;
+}
+
+
+
+

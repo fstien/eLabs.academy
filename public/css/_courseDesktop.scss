@@ -1,0 +1,503 @@
+// DESKTOP 
+//@media (min-width: 481px) {
+@media (min-aspect-ratio: 1/1), (min-width: 1000px) {
+
+$Padding: 35px;
+
+$doublePadding: #{2*$Padding};
+
+$headerHeight: 43px;
+$nextBarHeight: 45px;
+$nextBarPadding: 10px;
+
+$navBarHeight: 45px;
+$logoWidth: 100px;
+$rightLinkWidth: 145px;
+
+
+#NavBar { 
+	height: $navBarHeight;
+	background-color: $lightBlue;
+}
+
+.navDiv { 
+	float: left;
+	height: 100%;
+}
+
+
+#logo {
+	width: $logoWidth;
+}
+#logoImage { 
+	height: 24px;
+    display:block;
+    margin:auto;
+    margin-top: 10px;
+}
+
+
+#back {
+	width: calc(100% - #{$logoWidth + $rightLinkWidth});
+}
+#backLink { 
+	height: $navBarHeight;
+	text-align: center;
+}
+#backText { 
+	text-align: center;
+	height: $navBarHeight;
+	padding-top: 10px;
+	color: black;
+}
+#ReturnBackImg { 
+	height: 12px;
+}
+
+
+#backText:hover { 
+	color: 	#484848;
+}
+
+#rightLink { 
+	width: $rightLinkWidth;
+}
+#rightLink a { 
+	float: right; 
+	margin-right: 18px;
+}
+#rightText { 
+	text-align: center;
+	padding-top: 10px;
+	color: black;
+}
+#rightText:hover { 
+	color: 	#484848;
+}
+
+
+#Model { 
+	width: 100%;
+	height: calc(100% - #{$navBarHeight});
+}
+
+
+// Loader / spinner wheel
+#over {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	background-color: white;
+
+    text-align: center;  
+}
+#over:before {  
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle;  
+    height: 100%;
+}
+#over img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+
+// Sidebar 
+#SidebarMenu { 
+	background-color: white;
+}
+.item { 
+	text-align: left !important;
+	padding-left: $Padding !important;
+}
+.item a { 
+	color: black !important;
+	font-weight: normal;
+}
+.item:hover { 
+	background-color: $lightBlue !important;
+	cursor: pointer !important;
+}
+#activeLink { 
+	background-color: $darkBlue !important;
+}
+
+#activeh3 { 
+	color: white !important;
+}
+#sideBarDescription { 
+	text-align: left;
+	padding: $Padding;
+	margin-bottom: 0px;
+}
+.SideBarMenuItem { 
+	font-weight: normal;
+}
+
+// The title header and icon 
+#header { 
+	
+
+
+	//height: $headerHeight;
+	
+
+
+	// background-color: blue;
+}
+#headerWords { 
+	width: calc(100% - #{$Padding + 30px});
+	display: inline-block;
+	vertical-align: top;
+	font-size: 1.5em;
+	margin-bottom: 10px;
+}
+
+#ContentView { 
+	height: calc(100% - #{$headerHeight});
+	width: 100%;
+	
+	overflow: auto;
+
+	padding-right: $Padding;
+	margin-bottom: $nextBarPadding;
+
+	// background-color: green;
+}
+
+
+#fadeoutBottom {
+    position: absolute; 
+    bottom: #{2*$nextBarPadding + $nextBarHeight};
+    width: 100%;
+    height: 1em;
+    background: -webkit-linear-gradient(
+        rgba(242, 242, 242, 0) 0%,
+        rgba(242, 242, 242, 1) 100%
+    ); 
+    background-image: -moz-linear-gradient(
+        rgba(242, 242, 242, 0) 0%,
+        rgba(242, 242, 242, 1) 100%
+    );
+    background-image: -o-linear-gradient(
+        rgba(242, 242, 242, 0) 0%,
+        rgba(242, 242, 242, 1) 100%
+    );
+    background-image: linear-gradient(
+        rgba(242, 242, 242, 0) 0%,
+        rgba(242, 242, 242, 1) 100%
+    );
+    background-image: -ms-linear-gradient(
+        rgba(242, 242, 242, 0) 0%,
+        rgba(242, 242, 242, 1) 100%
+    );
+} 
+
+
+
+
+// Bottom of panel page navigation  
+#navDiv { 
+	width: calc(100% - #{$Padding});
+	height: #{$nextBarHeight + $buttonHoverRaise};
+//    background-color:orange;
+}
+
+
+.navElement { 
+	display: inline-block;
+	height: $nextBarHeight;
+	text-align:center;
+}
+
+
+.navLeft { 
+	float: left;
+	width: calc(50% - 25px);
+//	background-color: red;
+}
+
+.navLeft a { 
+	float: left;
+	margin-left: calc(50% - 53px);
+}
+
+.counter { 
+	float: left;
+	text-align: center;
+	padding-top: 10px;
+	margin-top: $buttonHoverRaise;
+//	background-color: green;
+	width: 50px;
+}
+
+.navRight { 	
+//	float: right;
+	width: calc(50% - 25px);
+}
+.navRight a { 
+	float: left;
+	margin-left: calc(50% - 53px);
+}
+
+
+.navButton { 
+//	visibility: hidden !important;
+}
+
+
+
+
+
+#pusherIcon { 
+	height: 22px;
+	margin-top: 8px;
+	margin-left: 5px;
+}
+#pusherIcon:hover {
+    cursor: pointer !important;
+    background-color: $darkGrey;
+}
+
+
+.box {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.box .row.header {
+  flex: 0 1 auto;
+}
+
+.box .row.content {
+  flex: 1 1 auto;
+}
+
+.box .row.footer {
+  flex: 0 1 40px;
+}
+
+
+// Geogebra divs
+#Applet { 
+	height: 100%;
+	width: $AppWidth;
+	float: left;
+
+	position: relative;
+	background-color: white;
+}
+#AppMain { 
+	height: calc(100% - #{$doublePadding});
+	width: calc(100% - #{$doublePadding});
+
+	margin-top: $Padding;
+	margin-left: $Padding;
+
+	// background-color: $background-color;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+
+
+// Right control panel 
+#Panel { 
+	height: 100%;
+	width: #{100% - $AppWidth};
+	margin-left: $AppWidth;
+	padding-left: $Padding;
+	background-color: $lightGrey !important;
+}
+#PanelContainer { 
+	height: 100%;
+	padding-top: #{$Padding - 12px};
+	padding-bottom: $nextBarPadding;
+}
+
+
+#AboutText { 
+	overflow-y:scroll; 
+	overflow-x:hidden; 
+	height: calc(100% - #{$navBarHeight});
+	padding-top: $navBarHeight;
+}
+
+
+
+
+
+
+
+
+
+
+#Land { 
+	width: 100%;
+	height: 100%;
+}
+
+
+#landingDivWrapper { 
+	width: 100%;
+	height: calc(100% - #{$navBarHeight});
+}
+
+#landingSlide { 
+	width: 100%;
+	height: 100%;
+	overflow-y:scroll; 
+	overflow-x:hidden; 
+}
+
+#landingDiv1 { 
+	height: calc(100% - #{$navBarHeight});;
+	width: 100%;
+	background-color: white;
+}
+
+#landContainer1 { 
+	height: 100%;
+}
+
+
+#landingDiv2 { 
+	height: calc(100% - #{$navBarHeight});;
+	width: 100%;
+	background-color: $lightGrey;
+}
+
+#landContainer2 { 
+	height: 100%;
+}
+
+
+#paddingDiv { 
+	height: 6%;
+}
+
+#paddingDiv2 { 
+	height: 5%;
+}
+#paddingDiv3 { 
+	height: 20%;
+}
+
+
+#landingTitle { 
+	font-weight: 500;
+	font-size: 2.5em;	
+	padding-top: 5%;
+	margin-top: 0px;
+	padding-top: 0px;
+	margin-bottom: 0px;
+}
+
+#landingDescription { 
+	font-weight: 300;
+	font-size: 1.2em;
+}
+
+.ExploreButton { 
+	width: 230px !important;
+	height: 60px !important;
+	border-radius: 0 !important;
+	font-family: 'Oxygen', "Segoe UI", "Helvetica Neue", sans-serif !important;
+	font-weight: 400 !important;
+	font-size: 1.2em !important;
+	animation: nextEase 3s infinite ease;
+
+	margin-top: 1px !important;
+	margin-bottom: 0px !important;
+
+	//margin-top: 1px !important;
+}
+
+.ExploreButton:hover { 
+	animation: hoverAnim 2s infinite ease;
+	//margin-top: 0px !important;
+
+	margin-top: 0px !important;
+	margin-bottom: 1px !important;
+
+}
+
+#landImageDiv { 
+	height: 70%;
+	position: relative;
+}
+
+
+
+
+#landImageContainer { 
+    width: 65%;
+    height: 55%;
+    margin: 0 auto;
+}
+#landImage {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    display:block;
+    margin:auto;
+}
+
+
+#argumentSegment { 
+	border-bottom: none;
+	height: 50%;
+}
+
+
+.colLanding { 
+	padding-top: 4em !important;
+	padding-bottom: 4em !important;
+	padding-right: 2em !important;
+	padding-left: 2em !important;
+}
+
+
+.colTitle { 
+	font-size: 1.5em !important;
+	font-weight: 500 !important;
+	margin-bottom: 0.5em !important;
+}
+
+.colTitleText { 
+	font-size: 1.2em !important;
+}
+
+#div2CallToAction { 
+	height: 50%; 
+	text-align:center;
+}
+
+#readyText {
+	font-size: 1.5em;
+	font-weight: 500 !important;
+	text-align: center !important;
+}
+
+#secondButton { 
+	 margin: 0 auto !important;
+}
+
+
+
+
+
+
+
+
+}
+

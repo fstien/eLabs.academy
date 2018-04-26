@@ -1,0 +1,363 @@
+@import 'fonts';
+
+
+html, body { 
+	width: 100%;
+	height: 100%;
+	margin: 0;
+
+	min-height: 500px;
+
+	-webkit-font-smoothing: antialiased;
+
+	font-family: 'Oxygen', "Segoe UI", "Helvetica Neue", sans-serif !important;
+
+	font-weight: 300 !important;
+
+	font-size: 17px !important;
+
+	// prevents scrolling
+  	overflow: hidden;
+
+  	box-sizing: border-box !important;
+}
+
+$AppWidth: 60%;
+
+$mobileFrac: 43%;
+
+
+$buttonHoverRaise: 1px;
+
+// Colors 
+$lightBlue: #d3fffc;
+
+$intBlue: #44fff2;
+$intGreen: #25B4A2;
+
+$darkGreen: #1F7E7A;
+$darkBlue: #122D38;
+
+$lightGrey: #f2f2f2;
+$darkGrey: #dbdbdb;
+
+
+
+// Main Containers 
+#App { 
+	width: 100%;
+	height: 100%;
+}
+#ReactWrapper { 
+	width: 100%;
+	height: 100%;
+}
+
+.pushable {
+	border: none !important;
+	overflow: hidden;
+}
+
+
+
+#PanelView { 
+	height: 100%;
+}
+
+
+#ContentView p { 
+	font-size: 1em;
+	line-height: 1.6em;
+	margin-bottom: 12px;
+	font-weight: 300 !important;
+}
+
+.infoLink { 
+	border-bottom: 2px solid $lightBlue;
+	color: black;
+	background-color: $lightBlue;
+}
+
+.infoLink:hover { 
+	color: black;
+	cursor: pointer;
+	border-bottom: 2px solid $intBlue;
+}
+
+
+
+.navButton { 
+	width: 107px !important;
+	border-radius: 0 !important;
+	font-family: 'Oxygen', "Segoe UI", "Helvetica Neue", sans-serif !important;
+	font-weight: 400 !important;
+}
+
+.buttImage { 
+	height: 13px;
+}
+
+.buttImageBack { 
+	margin-right: 5px;
+}
+.buttImageForward { 
+	margin-left: 5px;
+}
+
+#backButton { 
+	margin-top: $buttonHoverRaise;
+}
+#backButton:hover { 
+	margin-top: 0px;
+}
+
+#nextButton { 
+	animation: nextEase 3s infinite ease;
+	margin-top: $buttonHoverRaise;
+}
+#nextButton:hover { 
+	animation: hoverAnim 2s infinite ease;
+	margin-top: 0px;
+
+}
+
+@keyframes nextEase {
+  0% {
+    background-color: $lightBlue;
+  }
+  50% {
+    background-color: $intBlue;
+  }
+  100% {
+    background-color: $lightBlue;
+  }
+}
+@keyframes hoverAnim { 
+	0% { 
+		background-color: $intBlue;
+	}
+	100% {
+		background-color: $intBlue;
+	}
+}
+
+
+// Slider positioning 
+.sliderContainer { 
+	width: 78%;
+	height: 70px;
+	margin-bottom: 10px;
+}
+
+.symbolContainer { 
+	float: left;
+	width: 35%;
+	height: 100%;
+}
+
+.sliderSymbol {
+ 	text-align: center;
+	line-height: 70px !important;
+}
+
+.dragContainer { 
+	float: left;
+	width: 65%;
+	height: 100%;
+}
+
+.label { 
+	height: 30px;
+	width: 100%;
+}
+
+.drag { 
+	width: 100%;
+	height: 60%;
+	//margin-left: 10%;
+//	margin-top: 30px;
+}
+
+.rc-slider-mark { 
+	top: 14px !important;
+	z-index: 1;
+}
+
+.rc-slider-handle { 
+	border: solid 6px $intBlue !important;
+	z-index: 3;
+	width: 20px !important;
+	height: 20px !important;
+	margin-top: -7px !important;
+}
+
+.rc-slider-mark-text { 
+	color: black !important;
+	font-size: 1rem !important;
+	font-family: 'Oxygen', "Segoe UI", "Helvetica Neue", sans-serif !important;
+
+}
+
+.rc-slider-dot { 
+//	visibility: hidden !important;
+}
+
+.rc-slider-track { 
+	background-color: $intBlue !important;
+	z-index: 2;
+}
+
+.rc-slider-step { 
+	background-color: $lightBlue !important;
+}
+
+.rc-slider-dot { 
+	 border: none !important;
+	 background-color: $intBlue !important;
+	 border-radius: 0 !important;
+	 width: 5px !important;
+}
+
+
+.spanLabel { 
+	background-color: $lightBlue !important;
+	font-size: 1rem !important;
+}
+
+
+.jsloaded { 
+	border-color: white !important;
+}
+
+// Prevent display bugs
+p { 
+	margin-top: 0px;
+}
+
+
+path.pathLine { 
+	fill: none;
+//	stroke: black;
+}
+#lineConsumption { 
+	stroke: rgb(0, 140, 0);
+}
+#lineInvestment { 
+	stroke: rgb(159,126,189);
+}
+#lineOutput { 
+	stroke: rgb(37, 93, 115);
+}
+
+#d3Label { 
+	font-size: 1em;
+}
+#spanBlue { 
+	fill: rgb(37, 93, 115);
+}
+#spanGreen { 
+	fill: rgb(0, 140, 0);
+}
+#spanRed { 
+	fill: rgb(159,126,189);
+}
+#spanBlack { 
+	fill: rgb(0, 0, 0);
+}
+
+
+.buttonPath { 
+	cursor: pointer;
+}
+
+.ButtonBar { 
+	width: 100%;
+	overflow: hidden;
+}
+
+.ButtonShift { 
+	float:left;
+}
+
+.d3Text { 
+	font-size: 1em !important;
+	font-weight: 400 !important;
+}
+
+
+.varSpan4 { 
+  display: inline-block;
+  width: 44px;
+}
+
+.varSpan3 { 
+  display: inline-block;
+  width: 33px;
+}
+
+.varSpan2 { 
+  display: inline-block;
+  width: 22px;
+}
+
+
+#SelectLabel {
+	margin-bottom: 10px;
+}
+
+.dropdown { 
+	margin-bottom: 10px;
+}
+
+button.primary { 
+	background-color: $lightBlue !important;
+	color: black !important;
+	font-size: 1.2em !important;
+	border-radius: 0px !important;
+	height: 45px;
+	width: 110px;
+}
+
+.errorMessage { 
+	margin-left: 30px;
+}
+
+
+
+// About 
+
+#About { 
+	height: 100%;
+}
+
+
+.container p { 
+	-webkit-font-smoothing: antialiased;
+	font-family: 'Oxygen', "Segoe UI", "Helvetica Neue", sans-serif !important;
+	font-weight: 300;
+	line-height: 1.6;
+}
+
+
+#picOfMe { 
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+
+
+
+
+
+@import 'learn';
+
+@import 'slider';
+
+
+@import 'courseMobile';
+@import 'courseDesktop';
+
+
+// Katex CSS
+@import 'katex';
+
