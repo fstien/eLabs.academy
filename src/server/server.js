@@ -7,10 +7,10 @@ import serialize from "serialize-javascript";
 import {Helmet} from "react-helmet";
 const requestIp = require('request-ip');
 
-const https = require('https');
+// const https = require('https');
+// var fs = require('fs')
 
 var morgan = require('morgan')
-var fs = require('fs')
 
 var mysql = require('mysql');
 
@@ -33,6 +33,7 @@ app.use(compression());
 
 import LearnApp from "../shared/Nav/NavApp.js"
 import SolowApp from "../shared/course/Solow/SolowApp.js";
+import ISLMApp from "../shared/course/ISLM/ISLMApp.js";
 
 
 app.use(express.static("public"));
@@ -49,11 +50,6 @@ app.use(morgan('dev'));
 app.use(require('helmet')());
 
 
-// create a write stream (in append mode)
-//var accessLogStream = fs.createWriteStream(path.join(path.resolve(), 'access.log'), {flags: 'a'})
-// setup the logger
-//app.use(morgan('combined', {stream: accessLogStream}))
-
 
 
 app.get("/course/solow*", (req, res, next) => {
@@ -69,12 +65,34 @@ app.get("/course/solow*", (req, res, next) => {
   const helmetTitle = Helmet.renderStatic().title.toString();
 
   res.render('course', {
-    frontScript: "solowFront.js",
+    frontScript: "js/solowFront.js",
     markup: markup, 
     title: helmetTitle,
   });
 
 });
+
+
+app.get("/course/is-lm*", (req, res, next) => {
+
+  const contextObj = {};
+  
+  const markup = renderToString(
+        <StaticRouter location={req.url} context={contextObj}>
+          <ISLMApp />
+        </StaticRouter>
+    );
+ 
+  const helmetTitle = Helmet.renderStatic().title.toString();
+
+  res.render('course', {
+    frontScript: "js/islmFront.js",
+    markup: markup, 
+    title: helmetTitle,
+  });
+
+});
+
 
 
 app.get("/*", (req, res, next) => {
@@ -102,17 +120,9 @@ app.get("*", (req, res, next) => {
 })
 
 
+
 app.listen(3000, () => { 
   console.log("App is running.")
 });
-
-/*
-const options = {
-    cert: fs.readFileSync('/home/ubuntu/certs/fullchain.pem'),
-    key: fs.readFileSync('/home/ubuntu/certs/privkey.pem')
-};
-
-https.createServer(options, app).listen(3000);
-*/
 
 

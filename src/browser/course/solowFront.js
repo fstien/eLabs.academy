@@ -9,12 +9,9 @@ import GGBApp from '../Lib/Geogebra/GGBApp.js';
 
 import Var from '../Lib/Geogebra/Var.js';
 import Point from '../Lib/Geogebra/Point.js';
-import Intersection from '../Lib/Geogebra/Intersection.js';
-import Angle from '../Lib/Geogebra/Angle.js';
 import Func from '../Lib/Geogebra/Function.js';
 import Segment from '../Lib/Geogebra/Segment.js';
 import Text from '../Lib/Geogebra/Text.js';
-import Arc from '../Lib/Geogebra/Arc.js';
 import Plane from '../Lib/Geogebra/Plane.js';
 
 

@@ -273,14 +273,16 @@ function reduce(state = initState, action) {
         status: "defined",
       };
       
+
       (function wait() {
-        if ( state.varAdded ) {
+        if ( state.varAdded && g[action.app].applet.getAppletObject().exists(action.obj1) && g[action.app].applet.getAppletObject().exists(action.obj2)  ) {
           setTimeout(function() { 
-            //B = Intersect(f, p)
+
             g[action.app].applet.getAppletObject().evalCommand(action.letter + " = Intersect(" + action.obj1 + "," + action.obj2 + ")");
 
             state.i[action.letter].status = "mounted";
             g[action.app].applet.getAppletObject().setVisible(action.letter, false);
+
           }, timeoutWait)
         } else {
             setTimeout( wait, timeoutWait );
@@ -419,19 +421,18 @@ function reduce(state = initState, action) {
               g[action.app].applet.getAppletObject().evalCommand( action.letter + "= CircumcircularArc(" + action.letter + "C," + action.letter + "P," + action.letter + "B);" );
               
             }
-
-
+            
             g[action.app].applet.getAppletObject().setVisible(action.letter + "A", false);
             g[action.app].applet.getAppletObject().setVisible(action.letter + "B", false);
             g[action.app].applet.getAppletObject().setVisible(action.letter + "C", false);
             g[action.app].applet.getAppletObject().setVisible(action.letter + "D", false);
             g[action.app].applet.getAppletObject().setVisible(action.letter + "X", false);
             g[action.app].applet.getAppletObject().setVisible(action.letter + "P", false);
-
+            
             state.Arc[action.letter].status = "mounted";
-
+            
             g[action.app].applet.getAppletObject().setVisible(action.letter, false);
-
+            
           }, timeoutWait)
         } else {
             setTimeout( wait, timeoutWait );

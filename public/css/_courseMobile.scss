@@ -22,6 +22,13 @@ html, body {
 	font-size: 14px !important;
 }
 
+html {
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+}
+
 
 #NavBar { 
 	height: $navBarHeight;
@@ -48,20 +55,25 @@ html, body {
 #back {
 	width: calc(100% - #{$logoWidth + $rightLinkWidth});
 }
-#backLink { 
+#backTextLink { 
 	height: $navBarHeight;
 	text-align: center;
 }
-#backText { 
+#backTextLink { 
 	text-align: center;
 	height: $navBarHeight;
 	padding-top: 10px;
 	color: black;
 }
+
 #ReturnBackImg { 
 	height: 12px;
 }
 
+#backText { 
+	text-align: center;
+	padding-top: 10px;
+}
 
 #backText:hover { 
 	color: 	#484848;

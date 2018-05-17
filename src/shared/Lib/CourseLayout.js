@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { Sidebar, Segment, Button, Menu, Image, Icon, Header } from 'semantic-ui-react';
 import { Confirm } from 'semantic-ui-react';
 
-import NavBar from './NavBar.js';
+import images from './icons.js';
 
 
 export default class Layout extends React.Component {
@@ -46,7 +46,39 @@ export default class Layout extends React.Component {
           onCancel={this.handleConfirm}
         />
 
-        <NavBar logoPath="/" titleLink={true} returnUrl={this.props.returnUrl} returnTitle={this.props.returnTitle} leftArrow={true} routerLink={true} rightText={"Feedback"}  path={this.props.path + "/feedback"} />
+
+
+        <div id="NavBar">
+          <div className="navDiv" id="logo"> 
+            <a href="/">
+              <img id="logoImage" src="/media/eLabsLogo.png"/>
+            </a>
+          </div>
+
+          <div className="navDiv" id="back"> 
+
+            <a href={this.props.returnUrl} id="backLink"> 
+              <p id="backTextLink">                 
+                <img id="ReturnBackImg" src={images.back} />
+                {this.props.returnTitle}
+              </p>
+            </a>
+          
+          </div>
+
+          <div className="navDiv" id="rightLink"> 
+
+            <Link to={this.props.path + '/feedback'}>
+              <p id="rightText">
+                Feedback
+              </p>
+            </Link>
+         
+
+          </div>
+        </div>
+
+
 
         <div id="Model">
 

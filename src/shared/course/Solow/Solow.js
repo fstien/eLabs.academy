@@ -57,7 +57,7 @@ class View0 extends React.Component {
         <BlockMath>{"Y = F(K, L)"}</BlockMath>
 
         <p>
-          where <InlineMath>{"K"}</InlineMath> is the total value of all physical capital in the economy, such as machines, tractors and office buildings, <InlineMath>{"K"}</InlineMath> is the total number of workers in the economy and <InlineMath>{"Y"}</InlineMath> is real output. 
+          where <InlineMath>{"K"}</InlineMath> is the total value of all physical capital in the economy, such as machines, tractors and office buildings, <InlineMath>{"L"}</InlineMath> is the total number of workers in the economy and <InlineMath>{"Y"}</InlineMath> is real output. 
         </p>
 
         <p>
@@ -71,7 +71,7 @@ class View0 extends React.Component {
         </p>
 
         <p> 
-          A famous function which has this property is the <Link className="infoLink" to={course.path + "/Cobb-Douglas"}>Cobb-Douglas</Link> production function, which is formulated as follows: 
+          A famous function which has this property is the Cobb-Douglas production function, which is formulated as follows: 
         </p>
 
         <BlockMath>{"Y = K^\\alpha L^{(1- \\alpha)}"}</BlockMath>
@@ -368,7 +368,7 @@ class View3 extends React.Component {
 
         <BlockMath>{"y = Y/L = \\frac{K^\\alpha L^{(1- \\alpha)}}{L}"}</BlockMath>
 
-        <BlockMath>{" = K^\\alpha L^{(- \\alpha)} = \\frac{K}{L}^{\\alpha} = k^{\\alpha}"}</BlockMath>
+        <BlockMath>{" = K^\\alpha L^{(- \\alpha)} = (\\frac{K}{L})^{\\alpha} = k^{\\alpha}"}</BlockMath>
 
         <p>
           Hence, we have derived the per-worker production function as  <InlineMath>{"y = f(k) = k^{\\alpha}"}</InlineMath>. Let's see how this function changes shape as we vary <InlineMath>{"\\alpha"}</InlineMath>.
@@ -453,7 +453,7 @@ class View4 extends React.Component {
         <VarSlider letter="k" symbol="k" min={0} max={3} init={1} marks={{0:'0', 1:'1', 2:'2', 3:'3'}} step={0.01} />
 
         <p>
-          As each worker gets it's hands on more capital, the production function becomes flatter, indicating a diminishing marginal product of capital. This is because with a small amount of capital, an extra unit of capital for the average worker is very useful and produces a lot of additional output. With a lot of capital, workers given additional units of capital can only increase output slightly.  
+          As each worker gets its hands on more capital, the production function becomes flatter, indicating a diminishing marginal product of capital. This is because with a small amount of capital, an extra unit of capital for the average worker is very useful and produces a lot of additional output. With a lot of capital, workers given additional units of capital can only increase output slightly.  
         </p>
 
         <p>
@@ -1299,7 +1299,7 @@ class View9 extends React.Component {
         </p>
 
         <p> 
-          What about the relationship between saving and economic growth? As the savings rate increases, so does output growth but only temporarily. As the economy converges towards the new steady state, output growth falls to zero. Hence, if the saving rate is high, so will the capital stock, but it will not maintain a high rate of output growth forever. 
+          What about the relationship between saving and economic growth? As the savings rate increases, so does output growth but only temporarily. As the economy converges towards the new steady state, output growth falls to zero. Hence, if the saving rate is high, the capital stock will also be high, but it will not maintain a high rate of output growth forever. 
         </p>
 
       </PanelContainer>
@@ -2027,7 +2027,7 @@ class View13 extends React.Component {
         </p>
 
         <p>
-          Since the new steady state level of consumption is higher than the initial level, the increase in saving raises economic welfare. However, achieving the new Golden Rule steady state requires an initial period of reduces consumption. 
+          Since the new steady state level of consumption is higher than the initial level, the increase in saving raises economic welfare. However, achieving the new Golden Rule steady state requires an initial period of reduced consumption. 
         </p>
 
         <p> 
@@ -2211,7 +2211,7 @@ class View14 extends React.Component {
         </p>
 
         <p>
-          To understand how population growth affects the steady state, we must discuss how population growth (along with investment and depreciation) influences the accumulation of capital per worker. As we have seen, investment add to the capital stock whilst depreciation reduces it. Now there is a third force which influences the amount of capital per worker: growth in the number of workers causes the amount of capital per worker to decrease. 
+          To understand how population growth affects the steady state, we must discuss how population growth (along with investment and depreciation) influences the accumulation of capital per worker. As we have seen, investment adds to the capital stock whilst depreciation reduces it. Now there is a third force which influences the amount of capital per worker: growth in the number of workers causes the amount of capital per worker to decrease. 
         </p>
 
         <p>
@@ -2561,7 +2561,7 @@ class View16 extends React.Component {
       </p>
 
       <p>
-        The term <InlineMath>{"L \\times E"}</InlineMath> measures the <i>effective number of workers</i>. It takes into account the number of workers and how efficient each worker is. In this new production function, total output depends on both the inputs of capital and on a measure of both the number of workers and their skills (or technical know-how) with which their come equipped. 
+        The term <InlineMath>{"L \\times E"}</InlineMath> measures the <i>effective number of workers</i>. It takes into account the number of workers and how efficient each worker is. In this new production function, total output depends on both the inputs of capital and on a measure of both the number of workers and their skills (or technical know-how) with which they come equipped. 
       </p>
 
       <p>
@@ -2569,7 +2569,7 @@ class View16 extends React.Component {
       </p>
 
       <p>
-        We assume that technological progress causes the efficiency of labour <InlineMath>{"E"}</InlineMath> to grow at some constant rate <InlineMath>{"g"}</InlineMath>. For example, if <InlineMath>{"g = 0.02"}</InlineMath> then each unit of labour becomes 2 percent more efficient every year. The effect on total output is identical is if the number of workers had increased by 2 percent more than it really did. Hence, we call this approach to technological progress <i>labour augmenting</i>, and <InlineMath>{"g"}</InlineMath> is called the rate of <b>labor-augmenting technological progress</b>. 
+        We assume that technological progress causes the efficiency of labour <InlineMath>{"E"}</InlineMath> to grow at some constant rate <InlineMath>{"g"}</InlineMath>. For example, if <InlineMath>{"g = 0.02"}</InlineMath> then each unit of labour becomes 2 percent more efficient every year.  The effect on total output is identical to that of a 2 percent marginal increase in the number of workers. Hence, we call this approach to technological progress <i>labour augmenting</i>, and <InlineMath>{"g"}</InlineMath> is called the rate of <b>labor-augmenting technological progress</b>. 
       </p>
 
       <p>
@@ -2745,7 +2745,7 @@ class View17 extends React.Component {
     return(
       <PanelContainer courseObj={course} pageNo={17}>
       <p>
-        Now that <InlineMath>{"k"}</InlineMath> is defined as the amount of capital per effective worker, increases in the effective nmber of workers because of technological progress decrease <InlineMath>{"k"}</InlineMath>:
+        Now that <InlineMath>{"k"}</InlineMath> is defined as the amount of capital per effective worker, increases in the effective number of workers because of technological progress decrease <InlineMath>{"k"}</InlineMath>:
       </p>
 
       <VarSlider letter="G" symbol="g" min={0} max={0.15} init={0.02} marks={{0:'0', 0.15:'0.15'}} step={0.005} />
@@ -2765,7 +2765,7 @@ class View17 extends React.Component {
       </p>
 
       <p>
-        We can now infer what is happening the other variables that are not expressed at the per effective worker level. We consider output per actual worker <InlineMath>{"Y/L = y \\times E"}</InlineMath>. In the steady state, <InlineMath>{"y"}</InlineMath> is constant, whilst <InlineMath>{"E"}</InlineMath> grows at rate <InlineMath>{"g"}</InlineMath>, hence <InlineMath>{"Y/L"}</InlineMath> is also growing at rate <InlineMath>{"g"}</InlineMath> in the steady state. 
+        We can now infer what is happening with the other variables that are not expressed at the per effective worker level. We consider output per actual worker <InlineMath>{"Y/L = y \\times E"}</InlineMath>. In the steady state, <InlineMath>{"y"}</InlineMath> is constant, whilst <InlineMath>{"E"}</InlineMath> grows at rate <InlineMath>{"g"}</InlineMath>, hence <InlineMath>{"Y/L"}</InlineMath> is also growing at rate <InlineMath>{"g"}</InlineMath> in the steady state. 
       </p>
 
       <p>
@@ -2806,7 +2806,7 @@ class View17 extends React.Component {
           </Table.Row>
 
           <Table.Row>
-            <Table.Cell textAlign='center'>Totoal Output</Table.Cell>
+            <Table.Cell textAlign='center'>Total Output</Table.Cell>
             <Table.Cell textAlign='center'><InlineMath>{"Y = y \\times (E \\times L)"}</InlineMath></Table.Cell>
             <Table.Cell textAlign='center'><InlineMath>{"g + n"}</InlineMath></Table.Cell>
           </Table.Row>
@@ -2948,6 +2948,235 @@ course.addCourseRoute({
 })
 
 
+
+
+class View18 extends React.Component { 
+
+  constructor(props) {
+    super(props);
+
+    this.a = 0.2;
+    this.n = 0.01;
+    this.D = 0.2;
+    this.s = 0.35;
+    this.G = 0.02;
+    this.k = 1.6901;
+
+    this.c = 0.8;
+    this.kGold = 1.5;
+
+    this.state = {
+      a: this.a,
+      n: this.n,
+      s: this.s,
+      D: this.D,
+      G: this.G,
+      k: this.k,
+      c: this.c,
+      kGold: this.kGold,
+    }
+
+  }
+
+  render() {
+    return(
+      <PanelContainer courseObj={course} pageNo={18}>
+        <p>
+          The Solow model shows how saving and population growth determine an economy's steady-state capital stock and its steady state level of income per person. It shows how in the long run, countries that save a high fraction of their output are richer and why countries with high levels of population growth are poorer. We have also seen how the rate of technological progress determines the rate of growth in living standards. 
+        </p>
+
+        <VarSlider letter="a" symbol="\alpha" init={this.a} min={0} max={1} marks={{0:'0', 1:'1'}} step={0.01} />
+
+        <VarSlider letter="D" symbol="δ" min={0} max={0.3} init={this.D} marks={{0:'0', 0.3:'0.3'}} step={0.005} />
+
+        <VarSlider letter="N" symbol="n" min={0} max={0.2} init={this.n} marks={{0:'0', 0.2:'0.2'}} step={0.005} />
+
+        <VarSlider letter="G" symbol="g" min={0} max={0.2} init={this.G} marks={{0:'0', 0.2:'0.2'}} step={0.005} />
+
+        <VarSlider letter="s" symbol="s" min={0} max={1} init={this.s} marks={{0:'0', 1:'1'}} step={0.01} />
+
+        <VarSlider letter="k" symbol="k" min={0} max={3} init={this.k} marks={{0:'0', 3:'3'}} step={0.01} />
+
+      </PanelContainer>
+    ) 
+  }
+
+  updateApplet() { 
+    hide();
+
+    // GGBApp
+    g.applet1.show('full');
+    g.applet1.setCoords2D(g.params.app1Width, g.params.app1Height);
+    g.applet1.setLabels2D('Capital per effective worker, k', 'Output per effective worker, y');
+
+    // Func
+    g.p.show();
+    g.i.show();
+    g.g.show();
+
+    // Text
+    g.kSKText.show();
+    g.fkSText.show();
+
+    g.DPGText.show();
+    g.sT.show();
+    g.p2T.show();
+    g.gNGGoldText.show();
+
+    g.kSKText.changeColor(0, 0, 0);
+    g.fkSText.changeColor(0, 0, 0);
+
+    // Point
+    g.DPGPoint1.show();
+    g.DPGPoint2.show();
+
+    // Segment
+    g.FX.show();
+    g.c2Star.show();
+    g.iStar.show();
+
+    g.dng1.show();
+    g.dng2.show();
+
+    g.gNGGoldSeg.show();
+    g.fNGTangeant.show();
+
+    g.fNG1.show();
+    g.fNPGMPK.show();
+
+    // Set Var
+    g.a.set(this.a);
+    g.D.set(this.D);
+    g.N.set(this.n);
+
+    g.s.set(this.s);
+    g.G.set(this.G)
+    g.k.set(this.k);    
+
+    this.stateSubscribe = store.subscribe(this.changeVal.bind(this));
+  }
+
+  componentWillUnmount() { 
+    this.stateSubscribe();
+  }
+
+  changeVal() { 
+
+    
+    if(g.a.get() != this.a || g.D.get() != this.D || g.N.get() != this.n || g.G.get() != this.G) { 
+
+      this.a = g.a.get();
+      this.setState({ 
+        a: this.a
+      })
+
+      this.D = g.D.get();
+      this.setState({ 
+        D: this.D
+      })
+
+      this.n = g.N.get();
+      this.setState({ 
+        n: this.n
+      })
+
+      this.G = g.G.get();
+      this.setState({ 
+        G: this.G
+      })
+
+      let kTarget = (g.s.get()/(this.D+this.n+this.G))**(1/(1-this.a));
+
+      if(this.k != kTarget) { 
+
+        this.k = kTarget;
+        this.setState({ 
+          k: this.k,
+        })      
+        g.k.set(kTarget);
+
+        this.kGoldNew = ((this.D+this.n+this.G)/this.a)**(1/(this.a -1))
+        this.setState({ 
+          kGold: this.kGoldNew
+        })
+        g.kNGGold.set(this.kGoldNew);
+
+        g.dng2.setCaption( "δ+n+g=" + (Math.round( (this.D+this.n+this.G) * 100) / 100).toFixed(2));
+        g.fNPGMPK.setCaption( "MPK=" + (Math.round( (this.D+this.n+this.G) * 100) / 100).toFixed(2));
+
+      }
+
+    }
+
+    if(g.s.get() != this.s) { 
+      this.s = g.s.get();
+
+      this.setState({ 
+        s: this.s
+      })
+      
+      g.s.set( this.s ); 
+
+      let kTarget = (this.s/(this.D+this.n+this.G))**(1/(1-this.a));
+
+      if(this.k != kTarget) { 
+        this.k = kTarget;
+        this.setState({ 
+          k: this.k,
+        })      
+        g.k.set(kTarget);
+      }
+
+    }
+
+    if(g.k.get() != this.k) { 
+
+      this.k = g.k.get();
+      this.setState({ 
+        k: this.k,
+      })  
+
+      let sTarget = (this.D + this.n + this.G)*this.k**(1-this.a);
+
+      if(this.s != sTarget) {
+        this.s = sTarget;
+
+        this.setState({ 
+          s: sTarget
+        })
+
+        g.s.set(sTarget);
+      }
+
+    }
+
+
+  }   
+ 
+
+  componentDidMount() {
+    mixpanel.track(course.path + "/Conclusion");
+    hideSideBar();
+    if(store.getState().allMounted) { 
+      this.updateApplet()
+    } else { 
+      this.unsubscribe = store.subscribe(this.checkMounted.bind(this))
+    }
+    window.addEventListener("resize", this.updateApplet.bind(this))
+    store.dispatch({type: "setPath", path: window.location.pathname});
+  }
+  checkMounted() { 
+    if(store.getState().allMounted) { 
+      this.unsubscribe();
+      this.updateApplet();
+    }
+  }
+}
+course.addCourseRoute({ 
+  path: course.path + "/Conclusion",
+  component: View18,
+  title: "Conclusion"
+})
 
 
 

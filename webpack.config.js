@@ -8,7 +8,7 @@ const navFront = {
   entry: "./src/browser/navFront.js",
   output: {
     path: __dirname,
-    filename: "./public/navFront.js"
+    filename: "./public/js/navFront.js"
   },
   devtool: "cheap-module-source-map",
   module: {
@@ -78,7 +78,7 @@ const SolowFront = {
   entry: "./src/browser/course/solowFront.js",
   output: {
     path: __dirname,
-    filename: "./public/solowFront.js"
+    filename: "./public/js/solowFront.js"
   },
   devtool: "cheap-module-source-map",
   module: {
@@ -148,6 +148,89 @@ const SolowFront = {
     new webpack.optimize.AggressiveMergingPlugin()//Merge chunks 
   ]
 };
+
+
+
+
+
+const islmFront = {
+  entry: "./src/browser/course/islmFront.js",
+  output: {
+    path: __dirname,
+    filename: "./public/js/islmFront.js"
+  },
+  devtool: "cheap-module-source-map",
+  module: {
+    rules: [
+      {
+        test: [/\.svg$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+        loader: "file-loader",
+        options: {
+          name: "public/media/[name].[ext]",
+          publicPath: url => url.replace(/public/, "")
+        }
+      },
+      {
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          use: [
+            {
+              loader: "css-loader",
+              options: { importLoaders: 1 }
+            },
+            {
+              loader: "postcss-loader",
+              options: { plugins: [autoprefixer()] }
+            }
+          ]
+        })
+      },
+      {
+        test: /js$/,
+        exclude: /(node_modules)/,
+        loader: "babel-loader",
+        query: { presets: ["react-app"] }
+      }
+    ]
+  },
+  plugins: [
+    new ExtractTextPlugin({
+      filename: "public/css/[name].css"
+    }),
+    new webpack.BannerPlugin({
+      banner: "__isBrowser__ = true;",
+      raw: true,
+      include: /\.js$/
+    }),
+    
+
+
+    
+    
+    new webpack.DefinePlugin({ // <-- key to reducing React's size
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
+    
+    
+    new webpack.optimize.DedupePlugin(), //dedupe similar code 
+    new webpack.optimize.UglifyJsPlugin(), //minify everything
+    
+    
+
+
+
+
+
+
+    new webpack.optimize.AggressiveMergingPlugin()//Merge chunks 
+  ]
+};
+
+
+
+
 
 
 
@@ -218,5 +301,5 @@ const serverConfig = {
 };
 
 
-module.exports = [navFront, SolowFront, serverConfig];
+module.exports = [navFront, SolowFront, islmFront, serverConfig];
 

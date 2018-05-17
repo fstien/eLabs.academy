@@ -44,20 +44,27 @@ $rightLinkWidth: 145px;
 	height: $navBarHeight;
 	text-align: center;
 }
+#backTextLink { 
+	text-align: center;
+	height: $navBarHeight;
+	padding-top: 10px;
+	color: black;
+}
+#backTextLink:hover { 
+	color: 	#484848;
+}
 #backText { 
 	text-align: center;
 	height: $navBarHeight;
 	padding-top: 10px;
 	color: black;
 }
+
+
 #ReturnBackImg { 
 	height: 12px;
 }
 
-
-#backText:hover { 
-	color: 	#484848;
-}
 
 #rightLink { 
 	width: $rightLinkWidth;

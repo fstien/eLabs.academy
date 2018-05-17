@@ -1,7 +1,15 @@
-### Source code for http://elabs.academy/
+### https://elabs.academy/ : the smart way to learn economics.
 
-Built using: React, Redux, D3.js, Node, Express, MySQL, AWS. 
+Stack: React, Redux, D3.js, Node, Express, MySQL, AWS. 
 
-For security reasons, database code was removed from the repo. 
+## Usage
+~~~~
+npm install
+npm run createProduction
+node server.js
+~~~~ 
 
-If you would like to contribute, please email me. 
+
+Note: For security reasons, database code was removed from the repo. 
+
+If you would like to contribute, please email me at francois.stiennon [at] gmail.com

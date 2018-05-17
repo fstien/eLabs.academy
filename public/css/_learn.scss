@@ -55,7 +55,7 @@ ul {
 	height: 40px;
 	padding: 10px;
 	padding-left: 20px;
-	background-color: $lightBlue;
+	background-color: $lightGrey;
   } 
 
 }
@@ -87,9 +87,19 @@ ul {
 		height: 45px;
 		padding: 10px;
 		padding-left: 20px;
-		background-color: $lightBlue;
+		color: black;
+	//	background-color: $lightGrey;
 	}
 
+	.linkDiv:hover { 
+		background-color: $lightBlue;
+		color: black;
+	}
+
+}
+
+.moreDiv:hover { 
+	background-color: $lightGrey !important;
 }
 
 #two p { 
@@ -99,7 +109,7 @@ ul {
 
 
 .ActiveDiv { 
-	background-color: $darkBlue;
+	background-color: $darkBlue !important;
 }
 .activeText { 
 	color: white !important;
@@ -137,18 +147,24 @@ ul {
 	margin-left: 5px;
 }
 
-
+.learnNavLink { 
+	color: black;
+}
 
 .routeDiv { 
 	height: 40px;
 	padding: 9px;
 	color: black;
+	padding-left: 12px;
 }
 
 .routeDiv:hover { 
 	background-color: $lightGrey;
 }
 
-
+#NavLayout {
+	height: 100%;
+	overflow:hidden;
+}
 
 

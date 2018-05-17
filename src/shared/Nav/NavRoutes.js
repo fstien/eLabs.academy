@@ -5,11 +5,14 @@ import { Button, List, Header, Container, Segment, Image, Grid } from 'semantic-
 import {Helmet} from "react-helmet";
 
 
-import NavBar from '../Lib/NavBar.js';
+import NavBarBar from '../Lib/NavBarNav.js';
 
 import Nav from './NavClass.js';
 
 import SolowCourse from '../course/Solow/Solow.js'
+import ISLMCourse from '../course/ISLM/ISLM.js'
+
+
 import images from '../Lib/icons.js';
 
 
@@ -30,7 +33,7 @@ class ModelPreview extends React.Component {
             <title>eLabs | Courses | Learn {this.props.course.title}</title>
         </Helmet>
 
-        <NavBar logoPath="/" titleLink={false} returnTitle={"Courses"} routerLink={false} rightText={"About"}  path={"/About"} />
+        <NavBarBar titleLink={false} returnTitle={"Courses"} rightText={"About"}  path={"/About"} />
 
 
         <div className="wrapper">
@@ -58,6 +61,10 @@ class ModelPreview extends React.Component {
                   }
                 }
               )}
+
+              <div className="linkDiv moreDiv"> 
+                <p className="learnNavLink">More content coming soon!</p>
+              </div>
 
             </div>
             
@@ -119,9 +126,32 @@ class Solow extends React.Component {
 nav.addLearnRoute({
   path: SolowCourse.return,
   title: SolowCourse.title,
-
   component: Solow,
 })
+
+
+
+class ISLM extends React.Component { 
+
+  componentDidMount() { 
+    mixpanel.track(ISLMCourse.return);
+  }
+
+ render() { 
+  return(
+    <ModelPreview  course={ISLMCourse} path={ISLMCourse.return} />
+  )
+ }
+
+}
+
+nav.addLearnRoute({
+  path: ISLMCourse.return,
+  title: ISLMCourse.title,
+  component: ISLM,
+})
+
+
 
 
 
@@ -137,11 +167,10 @@ class Land extends React.Component {
     <div id="Land">
 
       <Helmet>
-          <title>eLabs | Interactive Economics: the best way to learn economics online</title>
+          <title>eLabs | Interactive Economics: the smart way to learn economics online</title>
       </Helmet>
 
-
-      <NavBar logoPath="/" titleLink={false} returnTitle={""}  routerLink={false} rightText={"About"}  path={"/About"} />
+      <NavBarBar titleLink={false} returnTitle={""} rightText={"About"}  path={"/About"} />
 
       <div id="landingDivWrapper">
 
@@ -159,16 +188,16 @@ class Land extends React.Component {
                   Interactive Economics
                 </p>
                 <p id="landingDescription">
-                  eLabs is the best way to learn economics online. Interact with models and gain a deep understanding of how economies work. 
+                  eLabs is the smart way to learn economics online. Interact with models and gain a deep understanding of how economies work. 
                 </p>
 
                 <div id="butDiv"> 
-                  <a href="/learn/solow">
+                  <Link to="/learn/solow">
                     <Button className="ExploreButton">
                       Explore Courses
                       <img className="buttImage buttImageForward" src={images.forward}/>
                     </Button>
-                  </a>
+                  </Link>
                 </div>
 
               </div>
@@ -178,7 +207,7 @@ class Land extends React.Component {
 
               <div id="landImageContainer">  
                 <a href="/course/solow/The-Golden-Rule-Level-of-Capital">
-                  <img src='/GoldenRule.gif' id="landImage" />
+                  <img src='/media/GoldenRule.gif' id="landImage" />
                 </a>
               </div> 
 
@@ -209,7 +238,7 @@ class Land extends React.Component {
                     <Grid.Column className="colLanding">
                       <p className="colTitle">3. Free</p>
                       <p className="colTitleText">
-                        eLabs is free and open source. Why not give it a try?
+                        eLabs is free and open source. No sign-up, no spammy emails, no ads. So why not give it a try?
                       </p>
                     </Grid.Column>
 
@@ -225,12 +254,12 @@ class Land extends React.Component {
                   Ready to start learning? 
                 </p>
 
-                <a href="/learn/solow">
+                <Link to="/learn/solow">
                   <Button className="ExploreButton">
                     Explore Courses
                     <img className="buttImage buttImageForward" src={images.forward}/>
                   </Button>
-                </a> 
+                </Link> 
               </div>
           
             </Container>
@@ -271,26 +300,30 @@ class About extends React.Component {
             <title>eLabs | About</title>
         </Helmet>
 
-        <NavBar logoPath="/" titleLink={true} returnTitle={"Courses"} returnUrl={"/learn/solow"} leftArrow={true}  routerLink={false} rightText={""}  path={"/About"} />
+        <NavBarBar titleLink={true} returnTitle={"Courses"} returnUrl={"/learn/solow"} leftArrow={true}  rightText={""}  path={"/About"} />
 
         <div id="AboutText">
 
           <Container text>
-
-            <p>
-              Hi there, I'm Francois Stiennon. I studied economics at Warwick and Cambridge. During my time as a student, I found reading textbooks to be inefficient and sometimes a bit dull. To keep things interesting, I started building tools to visualise and interact with the models. By being able to see how things work for myself, I was able to gain a much deeper intuition for the theory, which eventually allowed me to appreciate its beauty and relevance to the outside world. Much like the love of reading, I have found that economics is an aquired taste. 
-
-            </p>
-
-            <p>
-              I have since developed an interest in how to make the learning process more efficient through interactive software tools. This website is a way for me to experiment and explore my ideas for how to do this. I am a big believer in self-learning online. In fact, I've never received any formal training in computer science/programming. In the spirit of the internet, eLabs is an open source software project, hosted here on Github. If you would like to contribute, please get in touch. 
-            </p>
-
-            <p>
-                I hope you enjoy using eLabs as much as I enjoyed building it! You can also find eLabs on <a target="_blank" href="https://www.facebook.com/eLabs.academy/">facebook</a>. You can get in touch at francois.stiennon[at]gmail.com or through my <a target="_blank" href="https://www.linkedin.com/in/francoisstiennon/">LinkedIn profile</a>. Finally, here is a picture of me punting:
-             </p>
           
-             <Image id="picOfMe" src='/IMG_2832.jpg' centered size='large'/>
+            <p>
+              Hi there, I'm Francois Stiennon. I studied economics at Warwick and Cambridge. During my time as a student, I found reading textbooks to be inefficient and sometimes a bit dull. To keep things interesting, I started building tools to visualise and interact with the models. By being able to see how things work for myself, I was able to gain a much deeper intuition for the theory, which eventually allowed me to appreciate its beauty and relevance to the outside world. 
+              
+            </p>
+            
+            <p>
+              I have since developed an interest in how to make the learning process more efficient through interactive software tools. This website is a way for me to experiment and explore my ideas for how to do this. I am a big believer in learning things online. I haven't received any formal training in computer science/programming. Besides economics, my interests include statistics and  machine learning. 
+            </p>
+
+            <p>
+              Economics is often criticized as detached from the real world and too reliant on mathematical models and unreasonable assumptions. It is important to keep in mind that these models are not intended to be realistic descriptions of how the economy works. Instead, they can be seen as stories which contain ideas and intuitions which can be applied to analysing the economy. Hence the models themselves are not always very insightful, but it is worth the effort to undersand them as a first step. I’ve spent a lot of time trying to build up intuition for these models and I want to pass on that intuition to you. 
+            </p>
+
+            <p>
+             eLabs is an open source software project, <a target="_blank" href="https://github.com/fstien/eLabs.academy">hosted here</a> on GitHub. If you would like to contribute, please get in touch. I hope you enjoy using eLabs as much as I enjoy building it! You can find eLabs on <a target="_blank" href="https://www.facebook.com/eLabs.academy/">facebook</a>. If you are looking for the old version of eLabs, <a target="_blank" href="/V1">click here</a>. You can email me at francois.stiennon[at]gmail.com. I am also on <a target="_blank" href="https://www.linkedin.com/in/francoisstiennon/">LinkedIn</a> and <a target="_blank" href="https://github.com/fstien">GitHub</a>. Finally, here is a picture of me punting:
+            </p>
+            
+            <Image id="picOfMe" src='/media/IMG_2832.jpg' centered size='large'/>
 
            </Container>
         </div>

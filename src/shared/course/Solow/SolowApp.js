@@ -5,8 +5,6 @@ import Layout from "../../Lib/CourseLayout";
 
 import course from "./Solow.js";
 
-import watch from 'redux-watch';
-
 
 class NotFound extends React.Component {
 	render() { 

@@ -85,6 +85,39 @@ window.Intersection = class Intersection {
   }
   
 
+  getXCoord() { 
+    let returnValue;
+
+    (function wait() {
+     if(typeof store.getState().i[this.letter] != 'undefined') {  
+       if(store.getState().i[this.letter].status == "mounted") { 
+        
+        returnValue = g[this.app].applet.getAppletObject().getXcoord(this.letter);
+
+       } else { setTimeout( wait.bind(this), 100) }       
+      } else { setTimeout( wait.bind(this), 100) }
+    }.bind(this))();
+
+    return(returnValue);
+  }
+
+  getYCoord() { 
+    let returnValue;
+
+    (function wait() {
+     if(typeof store.getState().i[this.letter] != 'undefined') {  
+       if(store.getState().i[this.letter].status == "mounted") { 
+        
+        returnValue = g[this.app].applet.getAppletObject().getYcoord(this.letter);
+
+       } else { setTimeout( wait.bind(this), 100) }       
+      } else { setTimeout( wait.bind(this), 100) }
+    }.bind(this))();
+
+    return(returnValue);
+  }
+
+
   labelToggle() { 
     this.labelVisible = !this.labelVisible; 
 

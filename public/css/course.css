@@ -312,7 +312,7 @@ ul {
     height: 40px;
     padding: 10px;
     padding-left: 20px;
-    background-color: #d3fffc; } }
+    background-color: #f2f2f2; } }
 @media (min-aspect-ratio: 1 / 1), (min-width: 1000px) {
   #one {
     background-color: #f2f2f2;
@@ -334,12 +334,19 @@ ul {
     height: 45px;
     padding: 10px;
     padding-left: 20px;
-    background-color: #d3fffc; } }
+    color: black; }
+
+  .linkDiv:hover {
+    background-color: #d3fffc;
+    color: black; } }
+.moreDiv:hover {
+  background-color: #f2f2f2 !important; }
+
 #two p {
   line-height: 1.6em; }
 
 .ActiveDiv {
-  background-color: #122D38; }
+  background-color: #122D38 !important; }
 
 .activeText {
   color: white !important;
@@ -369,13 +376,21 @@ ul {
 .buttImageForward {
   margin-left: 5px; }
 
+.learnNavLink {
+  color: black; }
+
 .routeDiv {
   height: 40px;
   padding: 9px;
-  color: black; }
+  color: black;
+  padding-left: 12px; }
 
 .routeDiv:hover {
   background-color: #f2f2f2; }
+
+#NavLayout {
+  height: 100%;
+  overflow: hidden; }
 
 .rc-slider {
   position: relative;
@@ -691,11 +706,11 @@ ul {
   #back {
     width: calc(100% - 150px); }
 
-  #backLink {
+  #backTextLink {
     height: 40px;
     text-align: center; }
 
-  #backText {
+  #backTextLink {
     text-align: center;
     height: 40px;
     padding-top: 10px;
@@ -703,6 +718,10 @@ ul {
 
   #ReturnBackImg {
     height: 12px; }
+
+  #backText {
+    text-align: center;
+    padding-top: 10px; }
 
   #backText:hover {
     color: #484848; }
@@ -1024,6 +1043,15 @@ ul {
     height: 45px;
     text-align: center; }
 
+  #backTextLink {
+    text-align: center;
+    height: 45px;
+    padding-top: 10px;
+    color: black; }
+
+  #backTextLink:hover {
+    color: #484848; }
+
   #backText {
     text-align: center;
     height: 45px;
@@ -1032,9 +1060,6 @@ ul {
 
   #ReturnBackImg {
     height: 12px; }
-
-  #backText:hover {
-    color: #484848; }
 
   #rightLink {
     width: 145px; }

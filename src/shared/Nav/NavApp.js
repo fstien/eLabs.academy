@@ -3,13 +3,16 @@ import { Switch, Route, Link } from "react-router-dom";
 
 import nav from "./NavRoutes.js";
 
-import NavBar from '../Lib/NavBar.js';
+import NavBarNav from '../Lib/NavBarNav.js';
+
+import NavLayout from './NavLayout.js';
+
 
 class NotFound extends React.Component {
 	render() { 
 		return(
 				<div>
-			        <NavBar logoPath="/" titleLink={true} returnUrl={"/learn/solow"} leftArrow={true} returnTitle={"Courses"}  routerLink={false} rightText={"About"}  path={"/About"} />
+			        <NavBarNav logoPath="/" titleLink={true} returnUrl={"/learn/solow"} leftArrow={true} returnTitle={"Courses"} rightText={"About"}  path={"/About"} />
 
 			        <div className="errorMessage">
 						<br />
@@ -26,8 +29,13 @@ class NotFound extends React.Component {
 const LearnApp = () => {
   return (
         <Switch>
-           {nav.getAllRoutes().map((route, i) => <Route key={i} {...route} />)}
-  	       <Route key={nav.getAllRoutes().lenght} path="*" component={NotFound} />
+			<NavLayout>
+
+				{nav.getAllRoutes().map((route, i) => <Route key={i} {...route} />)}
+
+				<Route key={nav.getAllRoutes().lenght} path="*" component={NotFound} />
+
+			</NavLayout>
         </Switch>
   );
 };

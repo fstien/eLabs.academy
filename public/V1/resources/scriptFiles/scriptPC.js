@@ -1,0 +1,1 @@
+window.addEventListener("load",c,!1);function c(){var b=document.getElementById("canvas"),d=b.getContext("2d"),a=new Image;a.onload=function(){d.drawImage(a,b.width/2-150,100,300,300)};a.src="resources/coming-soon.gif"};

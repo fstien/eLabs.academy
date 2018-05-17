@@ -113,7 +113,7 @@ class ButtonShift extends React.Component {
 
 
 
-    this.image = this.draw.image('/' + this.props.letter + '.png', (1 - this.border*2 - 2*this.letterHorGap)*this.W, (1 - 2*(this.border + this.clickFrac) - 2*this.letterVertGap)*this.H).move(this.W*0.5 - 0.5*(1 - this.border*2)*this.W + this.letterHorGap*this.W, 0.5*this.H - 0.5*(1 - 2*(this.border + this.clickFrac))*this.H + this.letterVertGap*this.H)
+    this.image = this.draw.image('/media/' + this.props.letter + '.png', (1 - this.border*2 - 2*this.letterHorGap)*this.W, (1 - 2*(this.border + this.clickFrac) - 2*this.letterVertGap)*this.H).move(this.W*0.5 - 0.5*(1 - this.border*2)*this.W + this.letterHorGap*this.W, 0.5*this.H - 0.5*(1 - 2*(this.border + this.clickFrac))*this.H + this.letterVertGap*this.H)
 
 
     this.pathFillTop.on('click', () => {
